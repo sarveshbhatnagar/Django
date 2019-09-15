@@ -5,4 +5,22 @@ python manage.py runserver
 
 
 python manage.py startapp polls
- 
+
+(mysite main folder.)python manage.py migrate
+
+
+python manage.py makemigrations polls #tells django that we have made some changes to our models. and we will like the changes to be stored as makemigrations
+
+
+python manage.py sqlmigrate polls 0001 #takes migration names and returns their SQL.
+
+
+python manage.py migrate #takes all migrations and runs them against database (synchronises basically)
+
+#Migrations :
+Powerful, changing models overtime. aids in updating database live without
+needing to delete existing, and losing data.
+3 step guide for making model changes:
+1. Change models.
+2. Run python manage.py makemigrations
+3. Run python manage.py migrate
